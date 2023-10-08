@@ -1,0 +1,17 @@
+model:
+  policy_ckpt: ./logs_diffusion/training_2023_06_06__19_20_16/checkpoints/671000.pt   # retrained targetdiff
+  value_ckpt: './logs_diffusion/training_2023_06_06__16_05_56/checkpoints/1292000.pt'
+  joint_ckpt: './logs_diffusion/training_2023_06_06__20_16_16/checkpoints/642000.pt'   # KGDiff(ˆh0)
+  # joint_ckpt: './logs_diffusion/training_2023_07_05__12_15_55/checkpoints/1076000.pt' # KGDiff(h_0, P)
+  pdbbind_random: './logs_diffusion/training_2023_09_29__14_08_47/checkpoints/1415000.pt'  
+
+
+sample:
+  seed: 2021
+  num_samples: 10
+  num_steps: 1000
+  pos_only: False
+  center_pos_mode: protein
+  sample_num_atoms: prior
+
+
