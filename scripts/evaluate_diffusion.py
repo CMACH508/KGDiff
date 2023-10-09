@@ -41,15 +41,15 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # WARN: important turn on when evaluate pdbbind related proteins
     ################
-    parser.add_argument('--eval_pdbbind', type=bool, default=True)
+    parser.add_argument('--eval_pdbbind', action='store_true')
     ################
     
-    parser.add_argument('--sample_path', type=str, default='./pdbbind_random_res_baseline_rep/')
+    parser.add_argument('--sample_path', type=str, default='./test_poc/')
     parser.add_argument('--verbose', type=eval, default=True)
     parser.add_argument('--eval_step', type=int, default=-1)
     parser.add_argument('--eval_num_examples', type=int, default=None)
     parser.add_argument('--save', type=eval, default=True)
-    parser.add_argument('--protein_root', type=str, default='./data/pdbbind2020/')
+    parser.add_argument('--protein_root', type=str, default='./data/test_set/')
     parser.add_argument('--atom_enc_mode', type=str, default='add_aromatic')
     parser.add_argument('--docking_mode', type=str, default='vina_dock', choices=['qvina', 'vina_score', 'vina_dock', 'none'])
     parser.add_argument('--exhaustiveness', type=int, default=16)

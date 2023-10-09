@@ -34,11 +34,11 @@ if __name__ == '__main__':
     parser.add_argument('--protein_root', type=str, default='./data/extended_poc_proteins/')
     parser.add_argument('--config', type=str, default='./configs/sampling.yml')
     parser.add_argument('--device', type=str, default='cuda')
-    parser.add_argument('--batch_size', type=int, default=1)
+    parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--guide_mode', type=str, default='joint', choices=['joint', 'vina', 'valuenet', 'wo'])  
     parser.add_argument('--type_grad_weight', type=float, default=100)
     parser.add_argument('--pos_grad_weight', type=float, default=25)
-    parser.add_argument('--result_path', type=str, default='./extended_protein_res_fix_num')
+    parser.add_argument('--result_path', type=str, default='./test_poc')
     
     args = parser.parse_args()
     result_path = args.result_path

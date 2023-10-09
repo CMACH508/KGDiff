@@ -141,11 +141,11 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=str, default='./configs/sampling.yml')
     parser.add_argument('-i', '--data_id', type=int, default=81)
     parser.add_argument('--device', type=str, default='cuda')
-    parser.add_argument('--batch_size', type=int, default=5)
+    parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--guide_mode', type=str, default='joint', choices=['joint', 'pdbbind_random', 'vina', 'valuenet', 'wo'])  
     parser.add_argument('--type_grad_weight', type=float, default=0)
     parser.add_argument('--pos_grad_weight', type=float, default=0)
-    parser.add_argument('--result_path', type=str, default='./test_time')
+    parser.add_argument('--result_path', type=str, default='./test_package')
     
     args = parser.parse_args()
     result_path = args.result_path

@@ -53,7 +53,7 @@ if __name__ == '__main__':
     parser.add_argument('--config', type=str, default='./configs/training.yml')
     parser.add_argument('--device', type=str, default='cuda')
     parser.add_argument('--logdir', type=str, default='./logs_diffusion')
-    parser.add_argument('--ckpt', type=str, default='./logs_diffusion/training_2023_06_06__20_16_16/checkpoints/642000.pt')
+    parser.add_argument('--ckpt', type=str, default='')
     parser.add_argument('--tag', type=str, default='')
     parser.add_argument('--value_only', action='store_true')
     parser.add_argument('--train_report_iter', type=int, default=200)
