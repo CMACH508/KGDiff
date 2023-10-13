@@ -1,7 +1,7 @@
 <!--
  * @Author: QHGG
  * @Date: 2023-10-08 16:50:32
- * @LastEditTime: 2023-10-13 15:51:23
+ * @LastEditTime: 2023-10-13 15:57:29
  * @LastEditors: QHGG
  * @Description: 
  * @FilePath: /KGDiff/README.md
@@ -82,7 +82,7 @@ python scripts/evaluate_diffusion.py
 
 ## Installing and Running KGDiff from PyPI (not recommended)
 
-*note: before install KGDiff, please create an virtual env in [Installation](#🚀-installation) part.*
+*note: before install KGDiff, please create an virtual env in [Installation](#-installation) part.*
 
 | command  | excuting files | 
 |:------:|:------:|
