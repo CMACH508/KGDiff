@@ -47,8 +47,8 @@ def get_pearsonr(y_true, y_pred):
     y_pred = np.array(y_pred)
     return stats.pearsonr(y_true, y_pred)
 
-
-if __name__ == '__main__':
+def main():
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default='./configs/training.yml')
     parser.add_argument('--device', type=str, default='cuda')
@@ -57,7 +57,9 @@ if __name__ == '__main__':
     parser.add_argument('--tag', type=str, default='')
     parser.add_argument('--value_only', action='store_true')
     parser.add_argument('--train_report_iter', type=int, default=200)
-    
+    if len(sys.argv[1:]) == 0:
+        parser.print_help()
+        exit()
     args = parser.parse_args()
 
     # load ckpt
@@ -363,3 +365,7 @@ if __name__ == '__main__':
                                 f'Best val loss: {best_loss:.6f} at iter {best_iter}')
     except KeyboardInterrupt:
         logger.info('Terminating...')
+        
+        
+if __name__ == '__main__':
+    main()

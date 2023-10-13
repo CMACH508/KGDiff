@@ -135,8 +135,7 @@ def sample_diffusion_ligand(model, data, num_samples, batch_size=16, device='cud
         
     return all_pred_pos, all_pred_v, all_pred_exp, all_pred_pos_traj, all_pred_v_traj, all_pred_exp_traj, all_pred_v0_traj, all_pred_vt_traj, all_pred_exp_atom_traj, time_list
 
-
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', type=str, default='./configs/sampling.yml')
     parser.add_argument('-i', '--data_id', type=int, default=81)
@@ -146,8 +145,11 @@ if __name__ == '__main__':
     parser.add_argument('--type_grad_weight', type=float, default=0)
     parser.add_argument('--pos_grad_weight', type=float, default=0)
     parser.add_argument('--result_path', type=str, default='./test_package')
-    
+    if len(sys.argv[1:]) == 0:
+        parser.print_help()
+        exit()
     args = parser.parse_args()
+        
     result_path = args.result_path
     os.makedirs(result_path, exist_ok=True)
     shutil.copyfile(args.config, os.path.join(result_path, 'sample.yml'))
@@ -251,3 +253,7 @@ if __name__ == '__main__':
 
     
     torch.save(result, os.path.join(result_path, f'result_{args.data_id}.pt'))
+
+
+if __name__ == '__main__':
+    main()

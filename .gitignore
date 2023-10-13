@@ -3,6 +3,8 @@ logs_diffusion
 data
 misc_results
 benchmark
+tmp
+dist*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

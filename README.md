@@ -1,7 +1,7 @@
 <!--
  * @Author: QHGG
  * @Date: 2023-10-08 16:50:32
- * @LastEditTime: 2023-10-09 13:53:45
+ * @LastEditTime: 2023-10-13 15:51:23
  * @LastEditors: QHGG
  * @Description: 
  * @FilePath: /KGDiff/README.md
@@ -78,6 +78,25 @@ Here, we offer an example for evaluating generated molecules.
 
 ```bash
 python scripts/evaluate_diffusion.py
+```
+
+## Installing and Running KGDiff from PyPI (not recommended)
+
+*note: before install KGDiff, please create an virtual env in [Installation](#🚀-installation) part.*
+
+| command  | excuting files | 
+|:------:|:------:|
+| kg_gen    | scripts.sample_diffusion.py     | 
+| kg_gen4poc    | scripts.sample_for_pocket.py     | 
+| kg_train    | scripts.train_diffusion.py     | 
+| kg_eval    | scripts.evaluate_diffusion.py     | 
+
+Here is an example for training KGDiff.
+```bash
+conda activate kgdiff
+pip install KGDiff==0.1.2
+kg_train --config your_config_path --ckpt your_ckpt_path --logdir your_ckpt_dirname
+# Detailed arguments are given in scripts/train_diffusion.py
 ```
 
 ## Reproducing Our Paper

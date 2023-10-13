@@ -36,8 +36,7 @@ def print_ring_ratio(all_ring_sizes, logger):
         ring_info[ring_size] = f'{n_mol / len(all_ring_sizes):.3f}'
     return ring_info
 
-
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     # WARN: important turn on when evaluate pdbbind related proteins
     ################
@@ -53,6 +52,9 @@ if __name__ == '__main__':
     parser.add_argument('--atom_enc_mode', type=str, default='add_aromatic')
     parser.add_argument('--docking_mode', type=str, default='vina_dock', choices=['qvina', 'vina_score', 'vina_dock', 'none'])
     parser.add_argument('--exhaustiveness', type=int, default=16)
+    if len(sys.argv[1:]) == 0:
+        parser.print_help()
+        exit()
     args = parser.parse_args()
 
     result_path = os.path.join(args.sample_path, 'eval_results')
@@ -251,3 +253,7 @@ if __name__ == '__main__':
             'bond_length': all_bond_dist,
             'all_results': results
         }, os.path.join(result_path, f'metrics_{args.eval_step}_wo_vina.pt'))
+
+
+if __name__ == '__main__':
+    main()

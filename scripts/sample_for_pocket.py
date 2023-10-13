@@ -27,8 +27,7 @@ def pdb_to_pocket_data(protein_root, protein_fn, ligand_fn):
     data.ligand_filename = ligand_fn
     return data
 
-
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--pdb_idx', type=int, default=0)
     parser.add_argument('--protein_root', type=str, default='./data/extended_poc_proteins/')
@@ -39,7 +38,9 @@ if __name__ == '__main__':
     parser.add_argument('--type_grad_weight', type=float, default=100)
     parser.add_argument('--pos_grad_weight', type=float, default=25)
     parser.add_argument('--result_path', type=str, default='./test_poc')
-    
+    if len(sys.argv[1:]) == 0:
+        parser.print_help()
+        exit()
     args = parser.parse_args()
     result_path = args.result_path
     os.makedirs(result_path, exist_ok=True)
@@ -132,3 +133,7 @@ if __name__ == '__main__':
 
     
     torch.save(result, os.path.join(result_path, f'result_{os.path.basename(protein_fn)[:-4]}.pt'))
+
+
+if __name__ == '__main__':
+    main()
