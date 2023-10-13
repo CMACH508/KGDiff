@@ -1,7 +1,7 @@
 <!--
  * @Author: QHGG
  * @Date: 2023-10-08 16:50:32
- * @LastEditTime: 2023-10-13 18:43:23
+ * @LastEditTime: 2023-10-13 23:00:27
  * @LastEditors: QHGG
  * @Description: 
  * @FilePath: /KGDiff/README.md
@@ -25,7 +25,7 @@ pip install pyyaml easydict lmdb
 pip install numpy==1.21.6 pandas==1.4.1 tensorboard==2.9.0 seaborn==0.11.2 
 pip install Pillow==9.0.1
 conda install -c conda-forge openbabel
-pip install meeko==0.1.dev3 vina==1.2.2 pdb2pqr
+pip install meeko==0.1.dev3 vina==1.2.2 pdb2pqr rdkit
 
 # =======================
 # install autodocktools
