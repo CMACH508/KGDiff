@@ -1,7 +1,7 @@
 <!--
  * @Author: QHGG
  * @Date: 2023-10-08 16:50:32
- * @LastEditTime: 2023-10-13 15:57:29
+ * @LastEditTime: 2023-10-13 18:43:23
  * @LastEditors: QHGG
  * @Description: 
  * @FilePath: /KGDiff/README.md
@@ -80,9 +80,9 @@ Here, we offer an example for evaluating generated molecules.
 python scripts/evaluate_diffusion.py
 ```
 
-## Installing and Running KGDiff from PyPI (not recommended)
+## Installing and Running KGDiff from PyPI
 
-*note: before install KGDiff, please create an virtual env in [Installation](#-installation) part.*
+*note: Before you install KGDiff, please create an virtual env in [Installation](#-installation) part.*
 
 | command  | excuting files | 
 |:------:|:------:|
