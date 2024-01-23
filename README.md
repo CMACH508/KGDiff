@@ -102,6 +102,26 @@ kg_train --config your_config_path --ckpt your_ckpt_path --logdir your_ckpt_dirn
 ## Reproducing Our Paper
 We provide the **reproduction.ipynb** notebook file for reproducing figures and benchmarks in our paper. Before proceeding, please ensure you have downloaded and extracted the **misc_results.zip** and the **benchmark.zip** from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8419944.svg)](https://doi.org/10.5281/zenodo.8419944) into the root directory.
 
+## Citing Our Paper
+If you use the code or data in this package, please cite:
+
+```bibtex
+@article{10.1093/bib/bbad435,
+    author = {Qian, Hao and Huang, Wenjing and Tu, Shikui and Xu, Lei},
+    title = "{KGDiff: towards explainable target-aware molecule generation with knowledge guidance}",
+    journal = {Briefings in Bioinformatics},
+    volume = {25},
+    number = {1},
+    pages = {bbad435},
+    year = {2023},
+    month = {12},
+    issn = {1477-4054},
+    doi = {10.1093/bib/bbad435},
+    url = {https://doi.org/10.1093/bib/bbad435},
+    eprint = {https://academic.oup.com/bib/article-pdf/25/1/bbad435/55464687/bbad435.pdf},
+}
+```
+
 ## ⚖️ License
 
 The code in this package is licensed under the MIT License. We thanks TargetDiff for the open source codes.
